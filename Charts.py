@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Load your data here
-data = pd.read_csv('"D:/data sicece 2/44/MID-project/Hotel Bookings.csv"')  
+data = pd.read_csv('D:/data sicece 2/44/MID-project/Hotel Bookings.csv')  
 
 st.set_page_config(
     layout='wide',
