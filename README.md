@@ -1,1 +1,1 @@
-# Compesion btween bookings at city and resort hotels
+ Comparison between bookings at city and resort hotels
