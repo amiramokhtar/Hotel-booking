@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Load your data here
-data = pd.read_csv('Hotel Bookings.csv')  
+data = pd.read_csv('"D:/data sicece 2/44/MID-project/Hotel Bookings.csv"')  
 
 st.set_page_config(
     layout='wide',
@@ -129,7 +129,7 @@ with tab2:
     hotel_count.plot.pie(autopct='%1.2f%%', shadow=True, fontsize=15, startangle=50)
     plt.title('Hotel Booking Percentage')
     plt.axis('equal')
-    st.pyplot(fig2)  # Pass the figure object to st.pyplot
+    st.pyplot(fig2)  
 
     # Chart - 3 visualization code
     st.subheader("Hotel Cancellation Percentage")
@@ -138,35 +138,35 @@ with tab2:
     cancelled_hotel.plot.pie(explode=(0.05, 0.05), autopct='%1.2f%%', shadow=True, fontsize=15, startangle=50)
     plt.title('Percentage of Hotel Cancellation and Non-Cancellation')
     plt.axis('equal')
-    st.pyplot(fig3)  # Pass the figure object to st.pyplot
+    st.pyplot(fig3)  
 
     # Chart - 4 visualization code
     st.subheader("Bookings Across Years")
     fig4 = plt.figure(figsize=(10, 4))
     sns.countplot(x=data['arrival_date_year'], hue=data['hotel'])
     plt.title("Number of bookings across year", fontsize=25)
-    st.pyplot(fig4)  # Pass the figure object to st.pyplot
+    st.pyplot(fig4)  
 
     # Chart - 5 visualization code
     st.subheader("Bookings Across Months")
     fig5 = plt.figure(figsize=(15, 5))
     sns.countplot(x=data['arrival_date_month'], hue=data['hotel'])
     plt.title("Number of booking across months", fontsize=25)
-    st.pyplot(fig5)  # Pass the figure object to st.pyplot
+    st.pyplot(fig5)  
 
     # Chart - 6 visualization code
     st.subheader("Preferred Room Type by Guests")
     fig6 = plt.figure(figsize=(15, 5))
     sns.countplot(x=data['reserved_room_type'], order=data['reserved_room_type'].value_counts().index)
     plt.title('Preferred Room Type by Guests', fontsize=20)
-    st.pyplot(fig6)  # Pass the figure object to st.pyplot
+    st.pyplot(fig6)  
 
     # Chart - 7 visualization code
     st.subheader("Assigned Room Type to Guests")
     fig7 = plt.figure(figsize=(15, 5))
     sns.countplot(x=data['assigned_room_type'], order=data['assigned_room_type'].value_counts().index)
     plt.title('Assigned Room Type to Guests', fontsize=20)
-    st.pyplot(fig7)  # Pass the figure object to st.pyplot
+    st.pyplot(fig7)  
 
     # Chart - 8 visualization code
     st.subheader("Percentage of Repeated Guests")
@@ -175,7 +175,7 @@ with tab2:
     rep_guests.plot.pie(autopct='%1.2f%%', explode=(0.00, 0.09), shadow=False)
     plt.title('Percentage of Repeated Guests', fontsize=20)
     plt.axis('equal')
-    st.pyplot(fig8)  # Pass the figure object to st.pyplot
+    st.pyplot(fig8)  
 
     # Chart - 9 visualization code
     st.subheader("Customer Type Booking Count")
@@ -185,7 +185,7 @@ with tab2:
     plt.xlabel('Count', fontsize=8)
     plt.ylabel('Customer Type', fontsize=10)
     plt.title('Customer Type and their booking count', fontsize=20)
-    st.pyplot(fig9)  # Pass the figure object to st.pyplot
+    st.pyplot(fig9)  
 
     # Chart - 10 visualization code
     st.subheader("Most Repeated Guests for Each Hotel")
@@ -196,7 +196,7 @@ with tab2:
     plt.xlabel('Hotel type', fontsize=12)
     plt.ylabel('Count of repeated guests', fontsize=12)
     plt.title('Most Repeated Guests for Each Hotel', fontsize=20)
-    st.pyplot(fig10)  # Pass the figure object to st.pyplot
+    st.pyplot(fig10)  
 
     # Chart - 11 visualization code
     st.subheader("ADR Across Each Distribution Channel")
@@ -204,7 +204,7 @@ with tab2:
     fig11 = plt.figure(figsize=(15, 5))
     sns.barplot(x='adr', y='distribution_channel', data=dist_channel_adr, hue='hotel')
     plt.title('ADR Across Each Distribution Channel', fontsize=20)
-    st.pyplot(fig11)  # Pass the figure object to st.pyplot
+    st.pyplot(fig11) 
 
     # Chart - 12 visualization code
     st.subheader("Daily Revenue by Each Hotel Type")
@@ -213,4 +213,4 @@ with tab2:
     most_rev.plot.pie(autopct='%1.2f%%')
     plt.title('Percentage of Daily Revenue by Each Hotel Type', fontsize=20)
     plt.axis('equal')
-    st.pyplot(fig12)  # Pass the figure object to st.pyplot
+    st.pyplot(fig12) 
