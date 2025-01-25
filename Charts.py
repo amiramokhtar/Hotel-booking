@@ -5,12 +5,8 @@ import plotly.graph_objects as go
 import matplotlib.pyplot as plt
 import seaborn as sns
 import os
-import os
-print("Current working directory:", os.getcwd())
-# Construct the file path
-file_path = os.path.join('D:', 'data sicece 2', '44', 'MID-project', 'Hotel Bookings.csv')
 # Load your data here
-data = pd.read_csv('D:/data sicece 2/44/MID-project/Hotel Bookings.csv')  
+data = pd.read_csv('Hotel Bookings.csv')  
 
 st.set_page_config(
     layout='wide',
