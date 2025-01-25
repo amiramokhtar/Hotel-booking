@@ -4,7 +4,9 @@ import plotly.express as px
 import plotly.graph_objects as go
 import matplotlib.pyplot as plt
 import seaborn as sns
-
+import os
+# Construct the file path
+file_path = os.path.join('D:', 'data sicece 2', '44', 'MID-project', 'Hotel Bookings.csv')
 # Load your data here
 data = pd.read_csv('D:/data sicece 2/44/MID-project/Hotel Bookings.csv')  
 
